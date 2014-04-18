@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>SampleApp</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-
-<%= yield %>
-
-</body>
+	<head>
+		<title>Ruby on Rails Tutorial Sample App | <%= yield(:title) %></title>
+		<%= stylesheet_link_tag "application", :media => "all" %>
+		<%= javascript_include_tag "application" %>
+		<!--Prevents cross-site request forgery, a type of web attack -->
+		<%= csrf_meta_tags %>
+	</head>
+	<body>
+		<!--When home.html.erb is visited the contents are taken and placed here.-->
+		<%= yield %>
+	</body>
 </html>

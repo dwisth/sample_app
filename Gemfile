@@ -54,3 +54,7 @@ gem 'turbolinks'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+source 'https://rubygems.org'
+
+gem 'bootstrap-sass'

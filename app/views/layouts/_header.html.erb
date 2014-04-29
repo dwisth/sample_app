@@ -1,0 +1,16 @@
+	<header class="navbar navbar-fixed-top navbar-inverse">
+			<div class="navbar-inner">
+				<div class="container">
+					<!--Classes can be used multiple times but Ids only once per page. -->
+					<%= link_to "sample app", root_path, id: "logo" %>
+					<nav>
+						<ul class="nav pull-right">
+							<li><%= link_to "Home",		root_path %></li>
+							<!-- After evaluation: <li><a href="websiteURL">Home</a></li> -->
+							<li><%= link_to "Help", 	help_path %></li>
+							<li><%= link_to "Sign in", 	'#' %></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</header>

@@ -2,13 +2,16 @@
 <html>
 	<head>
 		<title><%= full_title(yield(:title)) %></title>
-		<%= stylesheet_link_tag "application", :media => "all" %>
+		<%= stylesheet_link_tag	"application", media: "all" %>
 		<%= javascript_include_tag "application" %>
-		<!--Prevents cross-site request forgery, a type of web attack -->
 		<%= csrf_meta_tags %>
+		<%= render 'layouts/shim' %>
 	</head>
 	<body>
-		<!--When home.html.erb is visited the contents are taken and placed here.-->
-		<%= yield %>
+		<%= render 'layouts/header' %>
+		<div class="container">
+			<%= yield %>
+			<%= render 'layouts/footer' %>
+		</div>
 	</body>
 </html>
